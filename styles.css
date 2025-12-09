@@ -1,0 +1,142 @@
+/* Core layout of webpage */
+:root {
+    --max-width:900px;
+    --accent:#8657d2;
+    --muted:#867b99;
+    --card-radius:12px;
+}
+*{ 
+    box-sizing:border-box;
+}
+body {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+    margin:0;
+    padding:24px;
+    background:linear-gradient(180deg,#f7fbff,#ffffff);
+    color:#111827;
+    display:flex;
+    justify-content:center;
+}
+
+.wrap {
+    width:100%;
+    max-width:var(--max-width);
+    background:#ffffff;
+    border-radius:var(--card-radius);
+    box-shadow:0 10px 30px rgba(13,38,59,0.08);
+    padding:20px;
+}
+
+header {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:12px;
+    margin-bottom:12px;
+}
+header h1 {
+    margin:0;
+    font-size:1.25rem
+}
+
+header p {
+    margin:0;
+    color:var(--muted);
+    font-size:0.95rem
+}
+
+/* Form styles */
+form {
+    display:grid;
+    grid-template-columns:1fr 140px 90px 90px 90px;
+    gap:8px;
+    margin-bottom:18px;
+}
+
+@media(max-width:680px) {
+    form{
+        grid-template-columns:1fr;
+    }
+}
+
+input[type=text],select {
+    padding:10px;
+    border-radius:8px;
+    border:1px solid #e6e9ef;
+}
+label{ 
+    display:inline-flex;
+    align-items:center;
+    gap:6px
+}
+
+button{
+    background:var(--accent);
+    color:white;
+    padding:10px;
+    border-radius:8px;
+    border:0;
+    cursor:pointer;
+}
+
+button.secondary{
+    background:#e5e7eb;
+    color:#111827
+}
+
+
+/* Task layout */
+#taskmanager {
+    display:flex;
+    flex-direction:column;
+    gap:10px
+}
+
+.task-card{
+    padding:12px;
+    border-radius:10px;
+    border:1px solid #eef2ff;
+    display:flex;
+    flex-direction:column;
+}
+.task-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:12px;
+}
+
+.task-name{
+    font-weight:600
+}
+
+.task-meta{
+    font-size:0.85rem;
+    color:var(--muted);
+}
+
+.task-controls{
+    display:flex;
+    gap:8px;
+}
+
+.small-btn{
+    padding:6px 8px;
+    border-radius:8px;
+    border:1px solid #e6e9ef;
+    background:#8657d2;
+    cursor:pointer;
+}
+
+.badge{
+    padding:4px 8px;
+    border-radius:999px;
+    font-size:0.8rem;
+    border:1px solid rgba(0,0,0,0.06);
+}
+
+footer{
+    margin-top:14px;
+    color:var(--muted);
+    font-size:0.9rem;
+}
