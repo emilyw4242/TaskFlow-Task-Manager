@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TaskFlow: Task Manager</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <div class="wrap">
+    <header>
+        <div>
+          <h1>TaskFlow: Task Manager</h1>
+          <p>Organize and complete your tasks quickly!</p>
+        </div>
+      <div class="logo" aria-hidden="true">⏱️</div>
+    </header>
+
+    <form id="taskForm">
+        <input id="taskName" type="text" placeholder="Enter task name" aria-label="Task name" />
+
+        <select id="priority" aria-label="Priority">
+           <option value="level" selected>Priority Level</option>
+           <option value="High">High</option>
+           <option value="Medium">Medium</option>
+           <option value="Low">Low</option>
+        </select>
+
+        <label>
+           <input id="important" type="checkbox" />Important
+           <input id="completed" type="checkbox" />Complete
+        </label>
+
+        <br><button id="addTaskBtn" class= "addTaskBtn" type="submit">Add Task</button>
+    </form>
+
+    <section id="taskmanager" aria-live="polite"></section>
+
+    <footer>
+        <p>Tasks reset upon refresh. All actions are logged in console.</p>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+  
+</body>
+</html>
